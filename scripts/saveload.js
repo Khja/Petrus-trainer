@@ -37,4 +37,3 @@ function loadSelection() {
         window.selCases = [31,32];
     saveSelection();
 }
-
