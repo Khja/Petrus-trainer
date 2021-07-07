@@ -70,14 +70,14 @@ function generateScramble()
         window.recapArray.splice(index, 1);
 
     }
-    var alg = inverse_scramble(randomElement(window.ollMap[caseNum]));
-    var rotation = randomElement(["", "y", "y2", "y'"]);
+    var alg = randomElement(window.ollMap[caseNum]);
+    var rotation = randomElement(["", "U", "U2", "U'"]);
     var finalAlg = applyRotationForAlgorithm(alg, rotation);
 
     window.lastScramble = finalAlg;
     window.lastCase = caseNum;
 
-    return finalAlg;
+    return alg;
 }
 
 // http://stackoverflow.com/questions/15604140/replace-multiple-strings-with-multiple-other-strings
@@ -396,7 +396,7 @@ function displayBox(event,i) {
         document.getElementById("boxalg").innerHTML += "<br><br>" + algsInfo[i]["a2"];
     //document.getElementById("boxsetup").innerHTML = "Setup: " + window.ollMap[i][0];
     document.getElementById("boxsetup").innerHTML = "Setup: " + inverse_scramble(algsInfo[i]["a"]);
-    document.getElementById("boxImg").src="pic/"+i+".svg";
+    document.getElementById("boxImg").src="pic/"+i+".png";
 }
 
 function hideBox() {
