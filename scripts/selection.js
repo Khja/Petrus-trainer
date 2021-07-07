@@ -73,8 +73,8 @@ function makeTrNormal(groupname) {
         var i = indeces[j]; // case number
         var sel = (window.selCases.indexOf(i) != -1);
         s += "<td id='itemTd"+i+"' onclick='itemClicked("+i+")' class='"+(sel?"itemSel":"itemUnsel")+"' title='"+algsInfo[i]["name"]+"'>"+
-        //"<img width='100px' id='sel"+i+"' src='pic/"+i+".svg' > <br>case #"+i+"</td>";
-        "<img width='100px' id='sel"+i+"' src='pic/"+i+".svg' ></td>";
+        //"<img width='100px' id='sel"+i+"' src='pic/"+i+".png' > <br>case #"+i+"</td>";
+        "<img width='100px' id='sel"+i+"' src='pic/"+i+".png' ></td>";
     }
     s += "</tr>";
     return s;
@@ -93,15 +93,15 @@ function makeTr42(gn1, gn2) {
         var i = in1[j]; // case number
         var sel = (window.selCases.indexOf(i) != -1);
         s += "<td id='itemTd"+i+"' onclick='itemClicked("+i+")' class='"+(sel?"itemSel":"itemUnsel")+"' title='"+algsInfo[i]["name"]+"'>"+
-        //"<img width='100px' id='sel"+i+"' src='pic/"+i+".svg' > <br>case #"+i+"</td>";
-        "<img width='100px' id='sel"+i+"' src='pic/"+i+".svg' ></td>";
+        //"<img width='100px' id='sel"+i+"' src='pic/"+i+".png' > <br>case #"+i+"</td>";
+        "<img width='100px' id='sel"+i+"' src='pic/"+i+".png' ></td>";
     }
     for (var j = 0; j < in2.length; j++) {
         var i = in2[j]; // case number
         var sel = (window.selCases.indexOf(i) != -1);
         s += "<td id='itemTd"+i+"' onclick='itemClicked("+i+")' class='"+(sel?"itemSel":"itemUnsel")+"' title='"+algsInfo[i]["name"]+"'>"+
-        //"<img width='100px' id='sel"+i+"' src='pic/"+i+".svg' > <br>case #"+i+"</td>";
-        "<img width='100px' id='sel"+i+"' src='pic/"+i+".svg' ></td>";
+        //"<img width='100px' id='sel"+i+"' src='pic/"+i+".png' > <br>case #"+i+"</td>";
+        "<img width='100px' id='sel"+i+"' src='pic/"+i+".png' ></td>";
     }
     s += "</tr>";
     return s;
@@ -116,18 +116,16 @@ function renderSelection()
     //s += "<tr><a onclick='selectAllNone()'>select all or none</a>";
     s += "<tr><td class='ollgrouptdUnsel' onclick='selectAllNone()' colspan='6'><b>All Cases (57)</b> | selected: <span id='csi'></span></td></tr>";
 
-    s += makeTr42("P-Shapes", "T-Shapes");
-    s += makeTr42("I-Shapes", "Squares");
-    s += makeTr42("Fish-Shapes", "C-Shapes");
-    s += makeTr42("Knight Move Shapes", "W-Shapes");
-    s += makeTr42("Awkward Shapes", "Corners Correct, Edges Flipped");
-    s += makeTrNormal("L-Shapes");
-    s += makeTrNormal("Lightning Bolts");
-    s += makeTrNormal("All Edges Oriented Correctly");
-    s += makeTrNormal("No Edges Flipped Correctly");
+    s += makeTrNormal("A");
+    s += makeTrNormal("B");
+    s += makeTrNormal("C");
+    s += makeTrNormal("D");
+    s += makeTrNormal("E");
+    s += makeTrNormal("F");
+    s += makeTrNormal("G");
+
 
     s += "</table>";
     document.getElementById("cases_selection").innerHTML = s;
     updateTitle();
 }
-
