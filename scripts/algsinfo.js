@@ -1,108 +1,115 @@
 var selCases = [];
 
 var algsGroups = {
-    "Easy" : [1],
-    "Horse" : [2,3,4,5,6,7],
-    "Hover" : [],
-    "Tower" : [],
-    "Up" : [],
-    "Down" : []
+    "A" : [1, 2, 3],
+    "B" : [4, 5, 6],
+    "C" : [7, 8, 9],
+    "D" : [10, 11, 12],
+    "E" : [13, 14, 15],
+    "F" : [16, 17, 18],
+    "G" : [19, 20],
 };
 
 var algsInfo = {
     1: {
-        "name": "Done",
-        "a": "U (R U' R')",
+        "name": "A1",
+        "a": "U' (R U R' U) (R U R')",
         "a2": "",
     },
     2: {
-        "name": "Insert",
-        "a": "R U R'",
+        "name": "A2",
+        "a": "U' (R U2' R') U2 (R U R')",
         "a2": "",
     },
     3: {
-        "name": "Zamboni",
-        "a": "U'(R U R' U) (R U R')",
+        "name": "A3",
+        "a": "U2 (R U R' U) (R U' R')",
         "a2": "",
     },
     4: {
-        "name": "Zamboni",
-        "a": "R' U2' R2 U R2' U R",
+        "name": "B1",
+        "a": "(R U R')",
         "a2": "",
     },
     5: {
-        "name": "Zamboni",
-        "a": "U' (R U' R' U) (R U R')",
+        "name": "B2",
+        "a": "(U' R U R') U2 (R U' R')",
         "a2": "",
     },
     6: {
-        "name": "Zamboni",
-        "a": "(U' R U R') U2(R U' R')",
-        "a2": "",
-    },
-    7: {
-        "name": "Zamboni",
-        "a": "U' (R U2' R') U2(R U' R')",
-        "a2": "",
-    },
-    8: {
-        "name": "Zamboni",
+        "name": "B3",
         "a": "U (R U2 R') U (R U' R')",
         "a2": "",
     },
+    7: {
+        "name": "C1",
+        "a": "R' U2' R2 U R2' U R",
+        "a2": "",
+    },
+    8: {
+        "name": "C2",
+        "a": "(R U R') U2 (R U' R') U (R U' R')",
+        "a2": "",
+    },
     9: {
-        "name": "Zamboni",
-        "a": "U2 (R U R' U)(RU' R')",
+        "name": "C3",
+        "a": "(R U R') U2' (R U R') U' (R U  R')",
         "a2": "",
     },
     10: {
-        "name": "Zamboni",
-        "a": "(R  U R')  U2  (R  U'  R' U)(R  U'  R')",
+        "name": "D1",
+        "a": "U' (R U R') U (R U R')",
         "a2": "",
     },
     11: {
-        "name": "Zamboni",
-        "a": "(R U2 R') U' (R U R')",
+        "name": "D2",
+        "a": "U R U' R'",
         "a2": "",
     },
     12: {
-        "name": "Zamboni",
-        "a": "U (R  U' R'  U')  (R  U'  R'  U) (R  U'  R')",
+        "name": "D3",
+        "a": "(R U2 R') U' (R U R')",
         "a2": "",
     },
     13: {
-        "name": "Zamboni",
-        "a": "U'F'(R U R'U') R'F R",
+        "name": "E1",
+        "a": "U' F' (R U R' U') R' F R",
         "a2": "",
     },
     14: {
-        "name": "Zamboni",
-        "a": "(R U' R' U)(R U' R')",
+        "name": "E2",
+        "a": "(R U' R') U (R U' R')",
         "a2": "",
     },
     15: {
-        "name": "Zamboni",
-        "a": "(U  R  U' R') (U  R  U'  R') (U  R  U'  R')",
+        "name": "E3",
+        "a": "(R U R' U') (R U R')",
         "a2": "",
     },
     16: {
-        "name": "Zamboni",
-        "a": "(U' R U'R') U2(R U' R')",
-        "a2": "",
-    },
-    17: {
-        "name": "Zamboni",
+        "name": "F1",
         "a": "U (R U R') U2 (R U R')",
         "a2": "",
     },
+    17: {
+        "name": "F2",
+        "a": "(U' R U' R') U2 (R U' R')",
+        "a2": "",
+    },
     18: {
-        "name": "Zamboni",
-        "a": "(R U' R' U') R UR' U2(R U' R')",
+        "name": "F3",
+        "a": "U R U' R' U R U' R' U R U' R'",
         "a2": "",
     },
     19: {
-        "name": "Zamboni",
-        "a": "(R U' R' U) (R U2' R') U (R U' R')",
+        "name": "G1",
+        "a": "R U' R' U' R U R' U2 R U' R'",
         "a2": "",
     },
+    20: {
+        "name": "G2",
+        "a": "R U' R' U R U2' R' U R U' R'",
+        "a2": "",
+    },
+
 };
